@@ -58,6 +58,13 @@ app.get('/bad', (request, response) => {
   });
 });
 
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs',{
+    pageTitle: 'Projects Page',
+    userGreetingsMessage: 'Hello! You will see all the projects listed here'
+  });
+});
+
 app.listen(port, ()=> {
   console.log(`Server is up and listening on port ${port}`);
 });
